@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Result System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Student Result System</h1>
+      <p>Enter student details and marks to calculate the result instantly.</p>
+    </header>
+
+    <section class="form-card">
+      <form id="resultForm">
+        <div class="grid-row">
+          <label for="studentName">Student Name</label>
+          <input type="text" id="studentName" name="studentName" placeholder="e.g. Priya Sharma" required />
+        </div>
+
+        <div class="grid-row">
+          <label for="studentClass">Class / Grade</label>
+          <input type="text" id="studentClass" name="studentClass" placeholder="e.g. 10th" required />
+        </div>
+
+        <div class="grid-row">
+          <label for="rollNumber">Roll Number</label>
+          <input type="text" id="rollNumber" name="rollNumber" placeholder="e.g. 23" required />
+        </div>
+
+        <div class="grid-row">
+          <label for="maths">Maths</label>
+          <input type="number" id="maths" name="maths" min="0" max="100" placeholder="0-100" required />
+        </div>
+
+        <div class="grid-row">
+          <label for="science">Science</label>
+          <input type="number" id="science" name="science" min="0" max="100" placeholder="0-100" required />
+        </div>
+
+        <div class="grid-row">
+          <label for="english">English</label>
+          <input type="number" id="english" name="english" min="0" max="100" placeholder="0-100" required />
+        </div>
+
+        <div class="grid-row">
+          <label for="computer">Computer</label>
+          <input type="number" id="computer" name="computer" min="0" max="100" placeholder="0-100" required />
+        </div>
+
+        <div class="grid-row full-width buttons">
+          <button type="submit" class="primary-btn">Calculate Result</button>
+          <button type="button" class="secondary-btn" id="clearBtn">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="result-card" id="resultCard" aria-live="polite">
+      <h2>Result Summary</h2>
+      <div class="result-details" id="resultDetails">
+        <p>No result calculated yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
